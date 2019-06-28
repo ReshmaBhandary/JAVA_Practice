@@ -11,7 +11,18 @@ public class Employee implements Serializable{
 	private String empName;
 	private int empInt;
 	private transient String city;
+	private Address add;
 	
+	
+	public Address getAdd() {
+		return add;
+	}
+	public void setAdd(Address add) {
+		this.add = add;
+	}
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
 	public String getCity() {
 		return city;
 	}
@@ -30,11 +41,12 @@ public class Employee implements Serializable{
 	public void setEmpInt(int empInt) {
 		this.empInt = empInt;
 	}
-	public Employee(String empName, int empInt,String city) {
+	public Employee(String empName, int empInt,String city,Address aa) {
 		super();
 		this.empName = empName;
 		this.empInt = empInt;
 		this.city=city;
+		this.add=aa;
 	}
 	
 	

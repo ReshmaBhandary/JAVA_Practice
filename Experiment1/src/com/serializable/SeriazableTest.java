@@ -18,7 +18,8 @@ public class SeriazableTest {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		Employee e1=new Employee("reshma", 123,"Udupi");
+		Address a1=new Address("a", "b");
+		Employee e1=new Employee("reshma", 123,"Udupi",a1);
 		objectOutputStream.writeObject(e1);
 		objectOutputStream.flush();
 		objectOutputStream.close();

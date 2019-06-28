@@ -11,6 +11,15 @@ public class DateValidations {
 
 	public static void main(String[] args) throws ParseException {
 		
+		Date d=new Date();
+		 d = sim.parse(sim.format(d));
+		 System.out.println(d);
+		Calendar cal = Calendar.getInstance();
+		cal.setTime(d);
+		System.out.println(cal.getTime());
+		int year = cal.get(Calendar.YEAR);
+		System.out.println("      "+year);
+		
 		
 		
 	
@@ -42,6 +51,26 @@ public class DateValidations {
 		System.out.println(dat14);
 		System.out.println(dat18);
 		checkBetweenAgeForDOB(a,dat14,dat18);
+		
+		
+		
+		
+		System.out.println("******************************************");
+		Date sysDate=new Date();
+		String startDateStr = "20/06/2019";
+		Date strtDateObj = sim.parse(startDateStr);
+		
+		Date todayWithZeroTime = sim.parse(sim.format(sysDate));
+		System.out.println(todayWithZeroTime);
+		
+		System.out.println(strtDateObj);
+		System.out.println(sysDate);
+		System.out.println(todayWithZeroTime.equals(strtDateObj));
+		
+		System.out.println(todayWithZeroTime.compareTo(strtDateObj));
+		
+		
+		
 	}
 
 	private static Date getDate(String dob, SimpleDateFormat sim2, int i) throws ParseException {
