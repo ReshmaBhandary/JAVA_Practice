@@ -23,12 +23,13 @@ public class DateValidations {
 		
 		
 	
-		String dateOfBirth = "30/09/2000";
+		String dateOfBirth = "123";
 		String startDate = "24/01/2014";
 		Date startDateObject = sim.parse(startDate);
 		String endDate = "31/10/2019";
 		Date endDateObject = sim.parse(endDate);
 		Date dateOfBirthOf18 = get18AgeDateFromDateOfBirth(dateOfBirth);
+		System.out.println("dateOfBirthOf18(************"+dateOfBirthOf18);
 		boolean flag = startDateObject.before(endDateObject);
 		if (!flag) {
 			System.out.println("wrong start end should be before end date ");

@@ -20,6 +20,9 @@ public class URLMaxCount {
 		urls[3] = "java.com";
 		urls[4] = "Hacker.com";
 		urls[5] = "awiki.com";
+		
+		
+		
 		String[] arr = solveIt(urls, urls.length);
 		System.out.println(Arrays.asList(arr));
 	}
