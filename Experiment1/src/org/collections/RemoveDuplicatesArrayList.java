@@ -20,6 +20,28 @@ public class RemoveDuplicatesArrayList {
 		removeDuplicates(set,strList);
 		
 		
+		System.out.println("**********************************");
+		ArrayList<String> listString1=new ArrayList<>();
+		listString1.add("A");
+		listString1.add("A");	listString1.add("B");
+		listString1.add("C");
+		
+		
+		ArrayList<String> listString2=new ArrayList<>();
+		listString2.add("A");
+		listString2.add("B");
+		
+		
+		HashSet<String> sett=new HashSet<>();
+		for(String str:listString2){
+			if(listString1.contains(str)){
+				listString1.remove(str);
+			}else{
+			sett.add(str);	
+			}
+		}
+		sett.addAll(listString1);
+		System.out.println(sett);
 
 	}
 

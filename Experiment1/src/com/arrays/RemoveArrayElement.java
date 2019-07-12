@@ -15,9 +15,14 @@ public class RemoveArrayElement {
 		System.out.println("*****");
 	List<String> list=new ArrayList<>(Arrays.asList(new String[]{"A","B"}));
 	list.add("C");
+	System.out.println(list);
 	ArrayList<String> aa=new ArrayList<>(list);
 	aa.add("A");
+	System.out.println(aa);
 	
+	List<String> list1=Arrays.asList(new String[]{"A","B"});
+	list1.add("C");
+	System.out.println(list1);
 		
 		
 	}

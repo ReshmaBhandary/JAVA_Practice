@@ -59,7 +59,9 @@ public class CustomizedLinkedList {
 			if (i == (index - 1)) {
 				System.out.println(node.getData() + " is removed at the given index "+index);
 				tempNode.setNode(node.getNode());
+				size--;
 				display();
+				
 
 				break;
 			}
@@ -138,5 +140,17 @@ public class CustomizedLinkedList {
 		temp.setNode(null);
 	//	newReverseNode=node;
 		
+	}
+	
+	public void findMiddleUsingTwoPointers(){
+		Node slowPointer=start;
+		Node fastPointer=start;
+		while(null!=fastPointer && null !=fastPointer.getNode()){
+			fastPointer=fastPointer.getNode().getNode();
+			slowPointer=slowPointer.getNode();
+			
+			
+		}
+		System.out.println(slowPointer.getData());
 	}
 }

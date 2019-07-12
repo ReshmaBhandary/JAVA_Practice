@@ -22,14 +22,18 @@ public class LinkedListMain {
 		list.add(n);
 		list.add(new Node(13, null));
 		list.add(new Node(14, null));
-		list.add(new Node(15, n));
+		list.add(new Node(15, null));
+		//list.add(new Node(15, n));
 		//list.add(n);
 		
 		//list.display();
 	//	list.deleteLast();
 	//	list.display();
+		
 		boolean isCyclic=list.isCyclic();
 		System.out.println(isCyclic);
+		list.display();
+		list.findMiddleUsingTwoPointers();
 		 
 		
 	}
